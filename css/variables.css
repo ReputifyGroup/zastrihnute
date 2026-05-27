@@ -1,0 +1,20 @@
+:root {
+  --green-1: #89d957;
+  --green-2: #c9e265;
+  --yellow: #ffd23f;
+  --yellow-deep: #f0b800;
+  --ink: #1a2410;
+  --ink-soft: #3a4a2a;
+  --cream: #fbfaf3;
+  --white: #ffffff;
+
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+
+  --shadow-card: 0 6px 0 rgba(26,36,16,0.04);
+  --shadow-soft: 0 14px 30px rgba(26,36,16,0.10);
+
+  --container: 1200px;
+}

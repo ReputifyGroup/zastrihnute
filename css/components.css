@@ -1,0 +1,157 @@
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn svg { width: 14px; height: 14px; }
+
+.btn-dark { background: var(--ink); color: var(--cream); }
+.btn-yellow { background: var(--yellow); color: var(--ink); box-shadow: 0 4px 0 var(--yellow-deep); }
+
+/* ---------- service cards ---------- */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.svc-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1.5px solid rgba(26,36,16,0.08);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+.svc-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+.svc-icon svg { width: 30px; height: 30px; }
+.svc-icon.green { background: var(--green-1); box-shadow: 0 6px 0 rgba(95,191,42,0.5); }
+
+.svc-card h3 { font-size: 22px; letter-spacing: -0.01em; }
+.svc-card p { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); flex: 1; }
+.svc-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(26,36,16,0.15);
+}
+.svc-price-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--ink); }
+.svc-price-value { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; }
+
+/* ---------- contact cards ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.big-contact {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1.5px solid rgba(26,36,16,0.08);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.big-contact:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+.big-contact-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.big-contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--white);
+}
+.big-contact-icon svg { width: 22px; height: 22px; }
+
+.big-contact.dark { border-top: 3px solid var(--ink); }
+.big-contact.dark .big-contact-icon { background: var(--ink); box-shadow: 0 6px 0 rgba(26,36,16,0.3); }
+
+.big-contact.yellow { border-top: 3px solid var(--yellow-deep); }
+.big-contact.yellow .big-contact-icon { background: var(--yellow); color: var(--ink); box-shadow: 0 6px 0 var(--yellow-deep); }
+
+.big-contact.whatsapp { border-top: 3px solid #1da851; }
+.big-contact.whatsapp .big-contact-icon { background: #25d366; box-shadow: 0 6px 0 #1da851; }
+.big-contact-label { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.big-contact-value { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(16px, 1.4vw, 20px); letter-spacing: -0.01em; word-break: break-word; color: var(--ink); }
+.big-contact-sub { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+
+.contact-info {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1.5px solid rgba(26,36,16,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .contact-info { grid-template-columns: 1fr; gap: 20px; }
+  .contact-info .divider { border-left: none !important; border-top: 1.5px dashed rgba(26,36,16,.15); padding-left: 0 !important; padding-top: 20px; }
+}
+.contact-info .label-mini {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+.contact-info .value-big {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+.contact-info .value-big svg { width: 18px; height: 18px; color: var(--green-3); }
+.contact-info .divider {
+  border-left: 1.5px dashed rgba(26,36,16,0.15);
+  padding-left: 28px;
+}
+.hours-list { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.hours-row { display: flex; justify-content: space-between; align-items: center; }
+.hours-row .day { color: var(--ink-soft); }
+.hours-row .time { font-weight: 700; }
+.hours-row.open .time::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--green-3);
+  margin-right: 8px;
+  vertical-align: middle;
+}
